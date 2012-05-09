@@ -1,0 +1,68 @@
+
+Segmentation fault Sat May  5 17:53:30 2012
+
+
+Squeak VM version: 3.9-7 #1 jeu avr 12 11:44:44 CEST 2012 version 4.1.2
+Built from: StackInterpreter VMMaker-oscog-EstebanLorenzano.139 uuid: 5aa53979-d7d8-4ca3-91fe-cfc3b4109c33 Apr 12 2012
+Revision: https://git.gitorious.org/cogvm/blessed.git Commit: 902ffacf60435842aec7b03aa57248b61cf9ee2b Date: Fri Apr 6 15:05:59 2012 +0200 By: Igor Stasenko <sig@ramee.lifl.fr>
+Build host: Linux pharo-build.lille.inria.fr 2.6.18-194.26.1.el5xen #1 SMP Tue Nov 9 14:13:46 EST 2010 i686 i686 i386 GNU/Linux
+plugin path: /media/psf/Home/Downloads/PBE-1.0-one-click.app/Contents/Linux [default: /media/psf/Home/Downloads/PBE-1.0-one-click.app/Contents/Linux/]
+
+
+C stack backtrace:
+/media/psf/Home/Downloads/PBE-1.0-one-click.app/Contents/Linux/pharo[0x807ffd4]
+/media/psf/Home/Downloads/PBE-1.0-one-click.app/Contents/Linux/pharo[0x80800fc]
+[0xf7748410]
+/media/psf/Home/Downloads/PBE-1.0-one-click.app/Contents/Linux/vm-display-X11(+0xd7e7)[0xf742c7e7]
+/media/psf/Home/Downloads/PBE-1.0-one-click.app/Contents/Linux/pharo(ioProcessEvents+0x23/media/psf/Home/Downloads/PBE-1.0-one-click.app/Contents/Linux/pharo[0x80731ed]
+/media/psf/Home/Downloads/PBE-1.0-one-click.app/Contents/Linux/pharo[0x80734d1]
+/media/psf/Home/Downloads/PBE-1.0-one-click.app/Contents/Linux/pharo(interpret+0x33bd)[0x807854d]
+/media/psf/Home/Downloads/PBE-1.0-one-click.app/Contents/Linux/pharo[0x8075174]
+/media/psf/Home/Downloads/PBE-1.0-one-click.app/Contents/Linux/pharo(main+0x38a)[0x8080dea]
+/lib32/libc.so.6(__libc_start_main+0xe6)[0xf75c2ca6]
+/media/psf/Home/Downloads/PBE-1.0-one-click.app/Contents/Linux/pharo[0x805d2c1]
+
+
+Smalltalk stack dump:
+0xfff199f8 SystemDictionary>setGCParameters -1222541652: a(n) SystemDictionary
+0xfff19a1c SmalltalkImage>snapshot:andQuit:embedded: -1222503152: a(n) SmalltalkImage
+-1203153008 s SmalltalkImage>snapshot:andQuit:
+-1203169632 s TheWorldMenu>quitSession
+-1203169744 s TheWorldMenu>doMenuItem:with:
+-1203169860 s [] in ToggleMenuItemMorph(MenuItemMorph)>invokeWithEvent:
+-1203169952 s BlockClosure>ensure:
+-1203170044 s CursorWithMask(Cursor)>showWhile:
+-1203170204 s ToggleMenuItemMorph(MenuItemMorph)>invokeWithEvent:
+-1203170296 s ToggleMenuItemMorph(MenuItemMorph)>mouseUp:
+-1203170388 s ToggleMenuItemMorph(MenuItemMorph)>handleMouseUp:
+-1203170524 s MouseButtonEvent>sentTo:
+-1203170616 s ToggleMenuItemMorph(Morph)>handleEvent:
+-1203170708 s MorphicEventDispatcher>dispatchDefault:with:
+-1203170800 s MorphicEventDispatcher>dispatchEvent:with:
+-1203170892 s ToggleMenuItemMorph(Morph)>processEvent:using:
+-1203170984 s MorphicEventDispatcher>dispatchDefault:with:
+-1203171092 s MorphicEventDispatcher>dispatchEvent:with:
+-1203171228 s MenuMorph(Morph)>processEvent:using:
+-1203171320 s MenuMorph(Morph)>processEvent:
+-1203171412 s MenuMorph>handleFocusEvent:
+-1203171504 s [] in HandMorph>sendFocusEvent:to:clear:
+-1203171596 s [] in PasteUpMorph>becomeActiveDuring:
+-1203171764 s BlockClosure>on:do:
+-1203171856 s PasteUpMorph>becomeActiveDuring:
+-1203171972 s HandMorph>sendFocusEvent:to:clear:
+-1203172120 s HandMorph>sendEvent:focus:clear:
+-1203172212 s HandMorph>sendMouseEvent:
+-1203172304 s HandMorph>handleEvent:
+-1203172436 s HandMorph>processEvents
+-1203172544 s [] in WorldState>doOneCycleNowFor:
+-1203172636 s Array(SequenceableCollection)>do:
+-1203172728 s WorldState>handsDo:
+-1203172820 s WorldState>doOneCycleNowFor:
+-1203172948 s WorldState>doOneCycleFor:
+-1203173040 s PasteUpMorph>doOneCycle
+-1220573348 s [] in Project class>?
+-1220573476 s [] in BlockClosure>?
+
+Most recent primitives
+
+	(Segmentation fault)
